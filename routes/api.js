@@ -16,7 +16,7 @@ router.get("/tasks", async (req, res, next) => {
         res
             .json({
                 ok: false,
-                error,
+                error: error.message,
             })
             .status(500);
     }
@@ -45,7 +45,7 @@ router.post("/task/create", async (req, res, next) => {
         res
             .json({
                 ok: false,
-                error,
+                error: error.message,
             })
             .status(500);
     }
@@ -67,7 +67,7 @@ router.get("/task/:task_id", async (req, res, next) => {
         res
             .json({
                 ok: false,
-                error,
+                error: error.message,
             })
             .status(500);
     }
@@ -89,7 +89,7 @@ router.delete("/task/:task_id", async (req, res, next) => {
         res
             .json({
                 ok: false,
-                error,
+                error: error.message,
             })
             .status(500);
     }
@@ -122,7 +122,7 @@ router.put("/task/:task_id", async (req, res, next) => {
         res
             .json({
                 ok: false,
-                error,
+                error: error.message,
             })
             .status(500);
     }
